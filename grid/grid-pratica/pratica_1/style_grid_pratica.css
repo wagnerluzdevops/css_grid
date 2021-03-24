@@ -24,12 +24,14 @@
       /* para ocupar o total width: 1fr repeat(4, minmax(auto, 200px)) 1fr */
       /* comente o max-width acima */
       grid-template-rows: .5fr 2fr .5fr .5fr;
-      grid-template-areas:
-          "header header     header     header    header    header"
-          ".      main       main       main      sidebar   .     "
-          ".      aside-main aside-main aside-sec aside-sec .     "
-          "footer footer     footer     footer    footer    footer"
-      ;
+      @media (min-width: 48em) {
+        grid-template-areas:
+            "header header     header     header    header    header"
+            ".      main       main       main      sidebar   .     "
+            ".      aside-main aside-main aside-sec aside-sec .     "
+            "footer footer     footer     footer    footer    footer"
+        ;
+      }
   }
 }
 
