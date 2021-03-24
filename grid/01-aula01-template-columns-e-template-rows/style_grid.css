@@ -1,0 +1,21 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 15% 200px 1fr;
+  grid-template-rows: 100px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  /* shorhand => grid-gap: */
+  grid-auto-rows: 200px;  
+  /* para as rows que não foram definidas, declaração implícita  */ 
+  /* se for igual ao template-rows podemos tirar estes */
+}
+
+.wrapper>div {
+    background-color: royalblue;
+    font-size: 3rem;
+    padding: 1rem;
+  }
+
+.wrapper>div:nth-child(even) {
+  background-color: yellow;
+}

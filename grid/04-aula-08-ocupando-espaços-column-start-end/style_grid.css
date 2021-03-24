@@ -1,0 +1,22 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 colunas de 1fr */
+  grid-template-rows: repeat(3, 200px);  /* 3 linhas de 200px */
+  grid-gap: 1rem;;
+}
+
+.wrapper>div {
+    background-color: royalblue;
+    font-size: 3rem;
+    padding: 1rem;
+  }
+
+.wrapper>div:nth-child(even) {
+  background-color: yellow;
+}
+
+.wrapper>div:nth-child(1) {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  grid-column: 1 / -1;
+}

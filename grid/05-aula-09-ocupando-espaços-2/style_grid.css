@@ -1,0 +1,36 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);  /* 5 colunas de 1fr */
+  grid-template-rows: repeat(3, minmax(200px, auto));  /* 3 linhas de 200px */
+  grid-gap: 0.5rem;;
+  height: 100vh;
+}
+
+.wrapper>div {
+    background-color: royalblue;
+    font-size: 3rem;
+    padding: 1rem;
+  }
+
+.wrapper>div:nth-child(even) {
+  background-color: yellow;
+}
+
+.wrapper>div:nth-child(1) {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  grid-column: 1 / -1;   /* -1  é até o final da linha */
+}
+
+.wrapper>div:nth-child(2) {
+  grid-column: 1;
+}
+
+.wrapper>div:nth-child(3) {
+  grid-column: 2 / 5;
+  font-size: 1.4rem;
+}
+
+.wrapper>div:nth-child(5) {
+  grid-column: 1 /-1;
+}
